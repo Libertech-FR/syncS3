@@ -1,0 +1,8 @@
+services: 
+ app:
+    env_file: .env
+    build: .
+    container_name: "sync"
+    volumes:
+      - /home/docker/bareos-sd/data/storage:/data
+      - ./logs:/var/log/s3sync
