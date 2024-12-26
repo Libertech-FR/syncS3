@@ -16,7 +16,7 @@ services:
     build: .
     container_name: "sync"
     volumes:
-      - /home/docker/bareos-sd/data/storage:/data
+      - ./data/storage:/data
       - ./logs:/var/log/s3sync
 ```
 the directory to watch must mounted in volume. In this exemple (for bareos : /home/docker/bareos-sd/data/storage)

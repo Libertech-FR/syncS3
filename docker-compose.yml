@@ -4,5 +4,5 @@ services:
     build: .
     container_name: "sync"
     volumes:
-      - /home/docker/bareos-sd/data/storage:/data
+      - ./data/storage:/data
       - ./logs:/var/log/s3sync
