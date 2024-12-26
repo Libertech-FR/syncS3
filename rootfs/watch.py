@@ -17,7 +17,7 @@ def main():
     wm = pyinotify.WatchManager()
     mask = pyinotify.IN_CLOSE_WRITE | pyinotify.IN_DELETE
     notifier = pyinotify.Notifier(wm, EventHandler())
-    wm.add_watch(path, mask)
+    wm.add_watch(path, mask,rec=True)
     try:
         notifier.loop()
     except KeyboardInterrupt:
