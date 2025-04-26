@@ -1,7 +1,7 @@
 .env
 /logs/*
 /test
-/rootfs/config
+/rootfs/config.conf
 /.idea
 /rootfs/cn_s3_api/__pycache__
 .DS_Store

@@ -10,7 +10,7 @@ ENV TIMEZONE=Europe/Paris \
 RUN apt-get clean -yq
 RUN apt-get  update -yq 
 RUN apt-get upgrade -yq 
-RUN apt-get install --no-install-recommends -yq ca-certificates python3 python3-pyinotify python3-boto3 gettext
+RUN apt-get install --no-install-recommends -yq ca-certificates python3 python3-pyinotify python3-boto3 gettext python3-paramiko
 
 COPY ./rootfs /
 

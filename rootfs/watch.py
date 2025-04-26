@@ -2,14 +2,12 @@
 import os.path
 import argparse
 import pyinotify
-
 class EventHandler(pyinotify.ProcessEvent):
     def process_IN_CLOSE_WRITE(self, event):
        print(f"IN_CLOSE_WRITE event detected on: {event.pathname}")
     def process_IN_DELETE(self,event):
        print(f"IN_DELETE event detected on: {event.pathname}")
 def main():
-    global __SECTION__
     parser = argparse.ArgumentParser()
     parser.add_argument('--path', help='configFile',default='/data')
     args = parser.parse_args()
