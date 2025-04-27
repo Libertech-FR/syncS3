@@ -48,7 +48,8 @@ def main():
     format= '%(asctime)s %(message)s'
     logging.basicConfig(filename=config.get_key(args.section,'logfile'), level=logging.INFO, format=format)
     logger=logging.getLogger()
-    logger.info("Start sync")
+    type = config.get_key(args.section, 'type')
+    logger.info("Start sync" + type)
     path = config.get_key(args.section, 'dir_source')
     wm = pyinotify.WatchManager()
     mask = pyinotify.IN_CLOSE_WRITE | pyinotify.IN_DELETE
