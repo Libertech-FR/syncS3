@@ -24,12 +24,16 @@ class EventHandler(pyinotify.ProcessEvent):
        delete_file(event.pathname)
 def copy_file(file):
     type=config.get_key(config.get_section(),'type','config')
+    logger = logging.getLogger();
+    logger.info(f"process copy_file : {type}")
     if type == 's3':
         s3_utils.copy_to_s3(file)
     elif type == 'sftp':
         sftp_utils.copy_to_sftp(file)
 def delete_file(file):
     type = config.get_key(config.get_section(), 'type', 'config')
+    logger = logging.getLogger();
+    logger.info(f"process delete_file : {type}")
     if type == 's3':
         s3_utils.delete_to_s3(file)
     elif type == 'sftp':
