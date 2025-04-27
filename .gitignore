@@ -5,3 +5,4 @@
 /.idea
 /rootfs/cn_s3_api/__pycache__
 .DS_Store
+conf/id_ed25519

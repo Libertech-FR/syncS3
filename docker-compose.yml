@@ -6,3 +6,4 @@ services:
     volumes:
       - ./data/storage:/data
       - ./logs:/var/log/s3sync
+      - ./conf:/conf

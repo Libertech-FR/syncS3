@@ -10,7 +10,7 @@ def open_ssh_conn():
     try :
         pkey = paramiko.Ed25519Key.from_private_key_file(key_file)
     except Exception as e:
-        # print("An exception occurred: {}".format(e))
+        print("An exception occurred reading key: {}".format(e))
         pass
     try:
         pkey = paramiko.RSAKey.from_private_key_file(key_file)
